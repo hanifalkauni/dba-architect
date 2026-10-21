@@ -1,0 +1,9 @@
+{
+  "mcpServers": [
+    {
+      "name": "dba-architect",
+      "command": "npx",
+      "args": ["-y", "github:hanifalkauni/dba-architect"]
+    }
+  ]
+}

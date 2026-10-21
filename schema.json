@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DbaArchitectConfig",
+  "type": "object",
+  "properties": {
+    "defaultDialect": {
+      "type": "string",
+      "enum": ["postgresql", "mysql"],
+      "default": "postgresql"
+    },
+    "strictness": {
+      "type": "string",
+      "enum": ["standard", "strict"],
+      "default": "strict"
+    },
+    "adapters": {
+      "type": "object",
+      "properties": {
+        "antigravity": { "type": "boolean" },
+        "cursor": { "type": "boolean" },
+        "claudeCode": { "type": "boolean" },
+        "windsurf": { "type": "boolean" },
+        "copilot": { "type": "boolean" },
+        "cline": { "type": "boolean" },
+        "kiro": { "type": "boolean" },
+        "continue": { "type": "boolean" }
+      }
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": { "type": "boolean" }
+    },
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "minPartitionRows": { "type": "number", "default": 10000000 },
+        "maxFilesToScan": { "type": "number", "default": 500 },
+        "hotPathFrequencyThreshold": { "type": "string", "enum": ["low", "medium", "high", "critical_hot_path"], "default": "high" }
+      }
+    },
+    "ignorePatterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

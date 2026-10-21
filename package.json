@@ -1,0 +1,47 @@
+{
+  "name": "dba-architect",
+  "version": "1.0.0",
+  "description": "End-to-End Database Optimization, Architecture & DBA MCP Server + Companion Agent Skill for PostgreSQL & MySQL",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "dba-architect": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "mcp",
+    "database",
+    "dba",
+    "postgresql",
+    "mysql",
+    "sql-optimizer",
+    "indexing",
+    "schema-analyzer",
+    "explain-analyze"
+  ],
+  "author": "Hanif Al-Kauni",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "fast-glob": "^3.3.2",
+    "ignore": "^6.0.2",
+    "node-sql-parser": "^5.3.6",
+    "pgsql-ast-parser": "^12.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}

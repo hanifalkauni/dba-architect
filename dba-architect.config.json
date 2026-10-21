@@ -1,0 +1,39 @@
+{
+  "$schema": "./schema.json",
+  "defaultDialect": "postgresql",
+  "strictness": "strict",
+  "adapters": {
+    "antigravity": true,
+    "cursor": true,
+    "claudeCode": true,
+    "windsurf": true,
+    "copilot": true,
+    "cline": true,
+    "kiro": true,
+    "continue": true
+  },
+  "rules": {
+    "SCHEMA-FLOAT-001": true,
+    "SCHEMA-FK-NOINDEX-001": true,
+    "SCHEMA-UUID-INNODB-001": true,
+    "INDEX-ESR-001": true,
+    "INDEX-REDUNDANT-001": true,
+    "CODE-NPLUS1-001": true,
+    "TX-RACE-001": true,
+    "TX-IO-001": true,
+    "PART-PK-001": true
+  },
+  "thresholds": {
+    "minPartitionRows": 10000000,
+    "maxFilesToScan": 500,
+    "hotPathFrequencyThreshold": "high"
+  },
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/vendor/**",
+    "**/dist/**",
+    "**/.git/**",
+    "**/*_test.*",
+    "**/*.spec.*"
+  ]
+}
